@@ -13,6 +13,9 @@ class Book:
         self.author = author
         self.pre_tax_price = pre_tax_price
         self.pages = pages
+    
+    def __str__(self):
+        return self.name
 
     @property
     def price(self):
@@ -46,3 +49,5 @@ print("Product info: ", Book.get_product_info())
 bookobj.purchase()
 
 print(Book.soldout)
+
+print("print the string for bookobj: ", bookobj)
