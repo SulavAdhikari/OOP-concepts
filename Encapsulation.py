@@ -24,8 +24,7 @@ class car:
         print("now moving at the speed of: " + str(self.__current_speed))
 
 print("\n\nBeggining of Encapsulation:")
-mustang_gt = car()
-print(mustang_gt.__current_speed)  
+mustang_gt = car() 
 
 try:
     print(mustang_gt.__current_speed)  
@@ -50,5 +49,8 @@ mustang_gt.decelerate(10)
 print(mustang_gt.get_current_speed())
 
 
+# Name Mangling
 
+print(" accessing by Name mangling")
 
+print(mustang_gt._car__current_speed)
