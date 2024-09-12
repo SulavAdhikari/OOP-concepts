@@ -2,14 +2,14 @@
 class car:
     def __init__(self):
         # encapsulated
-        self.__current_speed = 0  # encapsulating by adding __ before the name of the variable
+        self.__current_speed = 0  # encapsulating by addinh __ before the name of the variable
 
     # encapsulated
-    def __increase_speed(self, speed): # encapsulating by addind __ before the name of the method       
+    def __increase_speed(self, speed): # encapsulating by addinh __ before the name of the method       
         self.__current_speed = self.__current_speed + speed 
 
     # encapsulated
-    def __decrease_speed(self, speed): # encapsulating by addind __ before the name of the method
+    def __decrease_speed(self, speed): # encapsulating by addinh __ before the name of the method
         self.__current_speed = self.__current_speed - speed
 
     def get_current_speed(self):
@@ -25,6 +25,7 @@ class car:
 
 print("\n\nBeggining of Encapsulation:")
 mustang_gt = car()
+print(mustang_gt.__current_speed)  
 
 try:
     print(mustang_gt.__current_speed)  
@@ -41,9 +42,7 @@ try:
 except AttributeError:
     print("The method decrease_speed has been set up to be encapsulated")
 
-
 # printing current speed
-
 print(mustang_gt.get_current_speed())
 mustang_gt.accelerate(10)
 print(mustang_gt.get_current_speed())
@@ -51,4 +50,5 @@ mustang_gt.decelerate(10)
 print(mustang_gt.get_current_speed())
 
 
-# Inheritence
+
+
