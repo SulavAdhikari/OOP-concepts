@@ -58,12 +58,10 @@ my_motorcycle.start_engine()  # Implemented abstract method
 class Bus(Vehicle):
     def test_method(self):
         print("test")
-        
+
 try:
-    a = Bus("Tesla", "cybertruck", 2020) # Cannot instantiate abstract class.
+    a = Bus("Tesla", "cybertruck", 2020) # Cannot instantiate abstract class without the abstract method.
     a.test_method()
     a.start_engine()
 except TypeError as e:
     print(e)
-
-

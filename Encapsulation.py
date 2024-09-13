@@ -1,5 +1,5 @@
 # Encapsulation 
-class car:
+class Car:
     def __init__(self):
         # encapsulated
         self.__current_speed = 0  # encapsulating by addinh __ before the name of the variable
@@ -24,7 +24,7 @@ class car:
         print("now moving at the speed of: " + str(self.__current_speed))
 
 print("\n\nBeggining of Encapsulation:")
-mustang_gt = car() 
+mustang_gt = Car() 
 
 try:
     print(mustang_gt.__current_speed)  

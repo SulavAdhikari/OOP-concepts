@@ -14,7 +14,7 @@ class Book:
         self.pre_tax_price = pre_tax_price
         self.pages = pages
     
-    def __str__(self):
+    def __repr__(self):
         return self.name
 
     @property
@@ -39,7 +39,7 @@ class Book:
 
 
 
-bookobj = Book("bookname", "bookauthor", 100, 25)
+bookobj = Book("Testname", "bookauthor", 100, 25)
 
 print("\n\nPost tax price of the book: ", bookobj.price)
 
@@ -51,3 +51,7 @@ bookobj.purchase()
 print(Book.soldout)
 
 print("print the string for bookobj: ", bookobj)
+
+bookobj.book_type= "Physical"
+
+print(bookobj)
