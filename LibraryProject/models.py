@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 
 user_table = []
 book_table = []
-
+lend_table = []
 
 class ModelManager(ABC):
 
@@ -18,7 +18,7 @@ class ModelManager(ABC):
     @abstractmethod
     def save(self, dict_data):
         if self.id in [model['id'] for model in self.model_table]:
-            self.__initiate_id()
+            self.__assign_id()
         dict_data['id'] = self.id
         
 
@@ -37,9 +37,6 @@ class UserModel(ModelManager):
     phonenumber = None
 
     def __init__(self, username=None, age=None, phonenumber=None):
-        self.username = username
-        self.age = age
-        self.phonenumber = phonenumber
         self.dict_data = {
             'username':self.username,
             'age': self.age,
@@ -69,9 +66,6 @@ class BookModel(ModelManager):
     rating = None
 
     def __init__(self, book_name=None, author=None, rating=None):
-        self.book_name = book_name
-        self.author  = author
-        self.rating = rating
         super().__init__()
         self.dict_data = {
             'book_name':self.book_name,
